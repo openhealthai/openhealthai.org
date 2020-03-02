@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Card = props => (
-  <div className="card flex flex-col w-full max-w-xl self-stretch text-left m-4 p-3 md:p-6">
+  <div className="card bg-white rounded-lg flex flex-col w-full max-w-xl self-stretch text-left m-4 p-3 md:p-6">
     <h3 className="text-base md:text-xl lg:text-2xl font-bold mb-2 md:mb-4">{props.heading}</h3>
     <div className="text-sm md:text-lg lg:text-xl font-light">
       <a target="_blank" rel="noopener noreferrer" href={props.repo}>
@@ -10,7 +10,7 @@ const Card = props => (
     </div>
     {props.image && (
       <div className="image text-center m-3 sm:m-6 md:m-12">
-        <img src={props.image} />
+        <img className="rounded-lg" src={props.image} />
         <div>
           <a className="text-xs" target="_blank" rel="noopener noreferrer" href={props.imageSource}>
             Image Source
@@ -24,8 +24,6 @@ const Card = props => (
 
     <style jsx>{`
       .card {
-        background: white;
-        border-radius: 10px;
         box-shadow: rgba(0, 0, 0, 0.02) 0px 2.76726px 0.28924px -32px,
           rgba(0, 0, 0, 0.027) 0px 6.6501px 2.40675px -32px,
           rgba(0, 0, 0, 0.035) 0px 12.5216px 7.22195px -32px,
@@ -38,7 +36,6 @@ const Card = props => (
         width: 100%;
         max-height: 200px;
         max-width: 400px;
-        border-radius: 10px;
       }
 
       .card .image a {

@@ -10,17 +10,17 @@ const Home = () => (
     </Head>
 
     <main className="w-full flex-auto flex flex-col items-center justify-center py-5 sm:py-10 md:py-20">
-      <h1 className="text-title text-center text-4xl md:text-5xl lg:text-6xl font-primary font-bold">
+      <h1 className="text-title text-center text-4xl md:text-5xl lg:text-6xl font-bold">
         Open Health AI
       </h1>
 
-      <p className="lg:max-w-4xl text-description text-center text-sm md:text-base lg:text-lg font-primary font-normal p-4">
+      <p className="lg:max-w-4xl text-description text-center text-sm md:text-base lg:text-lg p-4">
         We are an international collaborative effort focused on bringing open-source AI models to
         solving global and public health challenges. Our work includes curating, building, training,
         fine-tuning, deploying, validating, and testing models.
       </p>
 
-      <div class="flex flex-wrap items-center justify-center mt-4 sm:mt-8 md:mt-16">
+      <div className="flex flex-wrap items-center justify-center mt-4 sm:mt-8 md:mt-16">
         <Card
           heading="Pneumonia detector for chest x-rays"
           repo="https://github.com/openhealthai/cxr-pneumonia-detector"
@@ -51,6 +51,10 @@ const Home = () => (
             COVID-19 patients.
           </p>
         </Card>
+      </div>
+
+      <div className="text-contact border border-contact rounded-full select-none mt-8 sm:mt-16 p-4">
+        Contact Us: hello@openhealthai.org
       </div>
     </main>
 
