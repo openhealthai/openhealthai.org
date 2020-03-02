@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => (
   <footer>
-    <div class="grey--text">&copy; 2020 Open Health AI</div>
+    <div className="text-copyright">&copy; 2020 Open Health AI</div>
     <style jsx>{`
       footer {
         width: 100%;

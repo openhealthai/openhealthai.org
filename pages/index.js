@@ -1,26 +1,33 @@
 import React from 'react';
+import Head from 'next/head';
 import Card from '../src/Card';
 import Footer from '../src/Footer';
 
 const Home = () => (
-  <div className="container">
-    <main>
-      <h1 className="title">Open Health AI</h1>
+  <div className="root flex flex-col items-center justify-center">
+    <Head>
+      <title>Open Health AI</title>
+    </Head>
 
-      <p className="description">
+    <main className="w-full flex-auto flex flex-col items-center justify-center py-5 sm:py-10 md:py-20">
+      <h1 className="text-title text-center text-4xl md:text-5xl lg:text-6xl font-primary font-bold">
+        Open Health AI
+      </h1>
+
+      <p className="lg:max-w-4xl text-description text-center text-sm md:text-base lg:text-lg font-primary font-normal p-4">
         We are an international collaborative effort focused on bringing open-source AI models to
         solving global and public health challenges. Our work includes curating, building, training,
         fine-tuning, deploying, validating, and testing models.
       </p>
 
-      <div className="grid">
+      <div class="flex flex-wrap items-center justify-center mt-4 sm:mt-8 md:mt-16">
         <Card
           heading="Pneumonia detector for chest x-rays"
           repo="https://github.com/openhealthai/cxr-pneumonia-detector"
           image="https://pubs.rsna.org/na101/home/literatum/publisher/rsna/journals/content/cardiothoracic/2020/cardiothoracic.2020.2.issue-1/ryct.2020200034/20200212/images/large/ryct.2020200034.fig5.jpeg"
           imageSource="https://pubs.rsna.org/doi/10.1148/ryct.2020200028"
         >
-          <p>
+          <p className="text-xs sm:text-sm md:text-base">
             Chest x-ray pneumonia detector model based on the 1st-place winning entry in the{' '}
             <a
               target="_blank"
@@ -39,8 +46,8 @@ const Home = () => (
           image="https://pubs.rsna.org/pb-assets/Radiology/slider/2-4-img8-1580824073370.gif"
           imageSource="https://pubs.rsna.org/doi/10.1148/radiol.2020200257"
         >
-          <p>
-            Chest CT pneumonia detector model. Includes a version fine-tuned on a dataset of
+          <p className="text-xs sm:text-sm md:text-base">
+            Chest CT pneumonia detector model. Soon to include a version fine-tuned on a dataset of
             COVID-19 patients.
           </p>
         </Card>
@@ -50,58 +57,8 @@ const Home = () => (
     <Footer />
 
     <style jsx>{`
-      .container {
+      .root {
         min-height: 100vh;
-        padding: 0 0.5rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-
-      main {
-        padding: 5rem 0;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .title {
-        margin: 0;
-        line-height: 1.25;
-        font-size: 4rem;
-        color: #fde3a7;
-      }
-
-      .title,
-      .description {
-        text-align: center;
-      }
-
-      .description {
-        color: #777777;
-        line-height: 1.5;
-        font-size: 1.2rem;
-        max-width: 800px;
-      }
-
-      .grid {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-
-        max-width: 1200px;
-        margin-top: 4rem;
-      }
-
-      @media (max-width: 600px) {
-        .grid {
-          width: 100%;
-          flex-direction: column;
-        }
       }
     `}</style>
   </div>

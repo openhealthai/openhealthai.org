@@ -10,12 +10,15 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <title>Open Health AI</title>
-          <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
+          <meta name="viewport" content="width=device-width,initial-scale=1" />
           <link rel="icon" href="/favicon.ico" />
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Barlow:300,400,500,700&display=swap"
+          />
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Noto+Sans:300,400,500,700&display=swap"
           />
         </Head>
         <body>
