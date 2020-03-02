@@ -10,18 +10,7 @@ yarn dev
 
 ## Deployment
 
-Install the Netlify CLI and login, if necessary:
-
-```sh
-yarn global add netlify-cli
-netlify login
-```
-
-Deploy using the `netlify.toml` config file:
-
-```sh
-netlify deploy
-```
+Continuous deployment to production is configured for the `master` branch.
 
 ---
 
